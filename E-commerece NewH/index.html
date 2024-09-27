@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive E-Commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>AgriWheel Impex</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-container">
+            <h1>Welcome to AgriWheel Impex</h1>
+            <p>Your Trusted Supplier of Premium Rice Products</p>
+            <button onclick="scrollToProducts()">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Premium Rice Products</h2>
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="Images/2-Aroma Super Kernal.png" alt="Aroma Super Kernal Rice">
+                <h3>Aroma Super Kernal Rice</h3>
+                <p>A premium variety of Basmati rice with a fragrant aroma and long grains, perfect for special meals.</p>
+                <button onclick="addToCart(1)">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="Images/5-sona Brown Rice.png" alt="Sona Brown Rice">
+                <h3>Sona Brown Rice</h3>
+                <p>Rich in fiber and nutrients, Sona Brown Rice is ideal for healthy diets and everyday meals.</p>
+                <button onclick="addToCart(2)">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="Images/HAR ROZ IRRI 6 RICE.jpeg" alt="Har Roz IRRI 6 Rice">
+                <h3>Har Roz IRRI 6 Rice</h3>
+                <p>A staple rice with soft texture and balanced taste, perfect for daily meals and various cuisines.</p>
+                <button onclick="addToCart(3)">Add to Cart</button>
+            </div>
+
+            <!-- Add Product 4 to Product 12 here -->
+            <div class="product">
+                <img src="Images/Super-Kernel-Basmati-Rice.png.jpg" alt="Super Kernel Rice">
+                <h3>Super Kernel Basmati Rice</h3>
+                <p>Long grain rice with rich aroma, known for its high quality and unique texture.</p>
+                <button onclick="addToCart(4)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="Images/4-Dawat PK 386.png" alt="Dawat PK 386 Rice">
+                <h3>Dawat PK 386 Rice</h3>
+                <p>Popular for its medium grain, PK 386 rice is a perfect option for everyday meals.</p>
+                <button onclick="addToCart(5)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="Images/8-hum-sub IRRI 9.png" alt=" IRRI-9 Rice">
+                <h3>HUM-SUB IRRI-9 Rice</h3>
+                <p>IRRI-9 rice offers a soft texture and is ideal for a variety of Asian and Middle Eastern dishes.</p>
+                <button onclick="addToCart(6)">Add to Cart</button>
+            </div>
+
+            
+
+            <div class="product">
+                <img src="Images/1121-Basmati-Extra-Long-Grain-White-Rice.jpg.jpg" alt="1121 Basmati White Rice">
+                <h3>1121 Basmati White Rice</h3>
+                <p>Known for its long grain and delicious taste, perfect for special dishes like biryani.</p>
+                <button onclick="addToCart(8)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="Images/3-Alpha 1121 Basmati Steamed.png" alt="1121 Steam Rice">
+                <h3>1121 Steam Basmati Rice</h3>
+                <p>Steamed basmati rice retains its texture and aroma for delicious meals.</p>
+                <button onclick="addToCart(9)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="Images/1121-Basmati-Golden-Sella-Rice-.png" alt="Golden Sella Rice">
+                <h3>1121 Basmati Golden Sella</h3>
+                <p>Golden Sella is parboiled, retaining more nutrients and is an excellent choice for traditional dishes.</p>
+                <button onclick="addToCart(10)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="Images/Green-Millet-1.png.jpg" alt="Green Millet">
+                <h3>Green Millet (Bajra)</h3>
+                <p>Rich in protein and fiber, perfect for those looking for gluten-free grain options.</p>
+                <button onclick="addToCart(11)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="Images/Sesame-2.png.webp" alt="Sesame">
+                <h3>Sesame (Til)</h3>
+                <p>High-quality sesame seeds, excellent for oil extraction or as a nutritious snack.</p>
+                <button onclick="addToCart(12)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Images/Vegitables.png.jpg" alt="Vegitables">
+                <h3>Vegitables</h3>
+                <p>IRRI-6 is a short-grain rice, known for its high yield and affordability.</p>
+                <button onclick="addToCart(7)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <div class="cart-container">
+            <p>No items in cart</p>
+            <!-- Dynamically populated cart items will go here -->
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+    </section>
+
+  <!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <div class="contact-info">
+        <p><strong>Phone:</strong> <a href="tel:+923144563820">+923144563820</a></p>
+        <p><strong>Email:</strong> <a href="mailto:ranahurabbas@gmail.com">ranahurabbas@gmail.com</a></p>
+        <p><strong>Company Email:</strong> <a href="mailto:info@agriwheelimpex.com">info@agriwheelimpex.com</a></p>
+    </div>
+
+    <div class="social-media">
+        <!-- Social Media Icons with Color -->
+        <a href="https://www.linkedin.com/in/hur-abbas-rana-42b866292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/hurabbas414?igsh=eGJsMG5kdHR3a2Z4" target="_blank" class="instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/hur.abbasjafri.512?mibextid=ZbWKwL" target="_blank" class="facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+    </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Hur Abbas Rana. All Rights Reserved.</p>
+    
+
+        <div class="footer-social-media">
+            <a href="https://www.linkedin.com/in/hur-abbas-rana-42b866292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/hurabbas414?igsh=eGJsMG5kdHR3a2Z4" target="_blank" class="instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/hur.abbasjafri.512?mibextid=ZbWKwL" target="_blank" class="facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
